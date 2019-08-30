@@ -1,0 +1,19 @@
+export MYPATH="""
+/global/scratch2/psudmant/other_datasets/GTEx/GTEx_download
+/global/home/users/psudmant/data/GTEx/setup_downlaod
+/global/home/groups/pl1data/pl1_sudmant/ROSMAPscRNAseq
+/clusterfs/genomicdata/data/ROSMAP
+/global/home/groups/pl1data/pl1_sudmant/ROSMAP_meta
+"""
+
+function lr()
+{
+    if [[ $# -eq 0 ]]; then
+        echo "$MYPATH" | head -n -1 | tail -n +2 | awk '{printf("%d: %s\n", NR, $0)}'
+    else 
+        if [[ $# -eq 1 ]]; then
+           local THISPATH=$( echo "$MYPATH" | head -n -1 | tail -n +2 | sed -n ${1}p)
+           cd "$THISPATH"
+        fi
+    fi
+}
