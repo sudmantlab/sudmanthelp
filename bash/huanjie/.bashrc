@@ -33,13 +33,12 @@ if [ -f ~/.profile ]; then
     . ~/.profile
 fi
 
-# do not load anything but vim in dtn node
-# because it's only for data transfer
+# load vim in dtn node
+# it's only for data transfer
 if [[ $HOSTNAME = dtn* ]]; then
     # echo "only load vim in dtn"
     module use /global/software/sl-7.x86_64/modfiles/langs /global/software/sl-7.x86_64/modfiles/tools /global/software/sl-7.x86_64/modfiles/apps /global/home/groups/consultsw/sl-7.x86_64/modfiles
     module load vim
-    return
 fi
 
 # added by Miniconda3 installer
