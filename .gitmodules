@@ -1,0 +1,3 @@
+[submodule "bash-otp"]
+	path = bash-otp
+	url = https://github.com/shenghuanjie/bash-otp
