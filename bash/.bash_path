@@ -1,3 +1,6 @@
+# These are some useful paths
+# You can put your own custom path here for easy navigation
+
 export MYPATH="""
 /global/scratch2/psudmant/other_datasets/GTEx/GTEx_download
 /global/home/users/psudmant/data/GTEx/setup_downlaod
@@ -10,7 +13,7 @@ function lr()
 {
     if [[ $# -eq 0 ]]; then
         echo "$MYPATH" | head -n -1 | tail -n +2 | awk '{printf("%d: %s\n", NR, $0)}'
-    else 
+    else
         if [[ $# -eq 1 ]]; then
            local THISPATH=$( echo "$MYPATH" | head -n -1 | tail -n +2 | sed -n ${1}p)
            cd "$THISPATH"
