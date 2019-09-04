@@ -7,6 +7,7 @@ export MYPATH="""
 /global/home/groups/pl1data/pl1_sudmant/ROSMAPscRNAseq
 /clusterfs/genomicdata/data/ROSMAP
 /global/home/groups/pl1data/pl1_sudmant/ROSMAP_meta
+/global/scratch/shenghuanjie/downloads/GTEx_download
 """
 
 function lr()
@@ -14,9 +15,15 @@ function lr()
     if [[ $# -eq 0 ]]; then
         echo "$MYPATH" | head -n -1 | tail -n +2 | awk '{printf("%d: %s\n", NR, $0)}'
     else
+        # enter a string to search
+        # enter a number to jump to the corresponding directory
         if [[ $# -eq 1 ]]; then
-           local THISPATH=$( echo "$MYPATH" | head -n -1 | tail -n +2 | sed -n ${1}p)
-           cd "$THISPATH"
+            if [[ $1 =~ ^[0-9]+$ ]]; then
+               local THISPATH=$( echo "$MYPATH" | head -n -1 | tail -n +2 | sed -n ${1}p)
+               cd "$THISPATH"
+            else
+                echo "$MYPATH" | head -n -1 | tail -n +2 | awk '{printf("%d: %s\n", NR, $0)}' | grep $1
+            fi
         fi
     fi
 }
