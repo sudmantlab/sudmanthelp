@@ -1,3 +1,9 @@
 [submodule "bash-otp"]
 	path = bash-otp
 	url = https://github.com/shenghuanjie/bash-otp
+[submodule "AWS_Tutorial"]
+	path = AWS_Tutorial
+	url = git@github.com:deto/AWS_Tutorial.git
+[submodule "Snakemake_Tutorial"]
+	path = Snakemake_Tutorial
+	url = git@github.com:deto/Snakemake_Tutorial.git
