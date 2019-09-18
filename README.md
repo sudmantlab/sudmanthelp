@@ -6,4 +6,10 @@
 - In the issues, there are common issues encountered by lab members that one might have as well.  Most of the issues can be resolved by Google but some require more efforts.
 - Tips and other comments might also be included.
 
+## Tutorials
+
+- Amazon Web Service (AWS) tutorial
+- Snakemake tutorial
+- TensorFlow tutorial
+
 ## Look into issues for common issues
