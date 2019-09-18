@@ -12,4 +12,8 @@
 - Snakemake tutorial
 - TensorFlow tutorial
 
+## Tools
+
+- bash-otp (Automatic log in command line tool for Savio cluster)
+
 ## Look into issues for common issues
