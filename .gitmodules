@@ -7,3 +7,6 @@
 [submodule "Snakemake_Tutorial"]
 	path = Snakemake_Tutorial
 	url = git@github.com:deto/Snakemake_Tutorial.git
+[submodule "tf-for-bio"]
+	path = tf-for-bio
+	url = git@github.com:jordisr/tf-for-bio.git
